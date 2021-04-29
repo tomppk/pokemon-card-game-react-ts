@@ -1,7 +1,12 @@
 import React from 'react';
+import StartMenu from './StartMenu';
 
 const App: React.FC = () => {
-  return <h1>Hello there</h1>;
+  return (
+    <div>
+      <StartMenu />
+    </div>
+  );
 };
 
 export default App;
