@@ -1,6 +1,26 @@
 import React from 'react';
+import { useEffect } from 'react';
 
 const StartMenu = () => {
+  // useEffect invokes callback when StartMenu component is rendered first
+  // time
+  useEffect(() => {
+    // Selector for start menu form label
+    const labels = document.querySelectorAll('.form-control label');
+
+    // Animation for "Enter your name" input in start menu form
+    labels.forEach((label) => {
+      if (label.textContent)
+        label.innerHTML = label.textContent
+          .split('')
+          .map(
+            (letter: string, idx: number) =>
+              `<span style="transition-delay:${idx * 50}ms">${letter}</span>`
+          )
+          .join('');
+    });
+  }, []);
+
   return (
     <div id="startMenuContainer">
       <h1>Pokemon Card Game</h1>
