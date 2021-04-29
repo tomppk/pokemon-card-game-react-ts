@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Card Game</title>
+    <link href="/public/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="endMenu" class="">
+        <h1 id="endMenuName"></h1>
+        <p id="guessParagraph"></p>
+        <p id="timeParagraph"></p>
+         <div id="highScores">
+            <h2 id="highScoresHeader">High Scores</h2>
+            <ol id="highScoresList"></ol>
+        </div>
+        <button class="btn" id="endGameButton">Start a New Game</button>
+    </div>
+
+    <div id="overlay"></div>
+    <nav id="navbar" class="hide">
+        <div id="score">Guesses: <span id="guesses">0</span></div>
+        <div id="restart">Restart</div>
+        <div class="clock"></div>
+    </nav>
+
+    <div id="startMenuContainer">
+        <h1>Pokemon Card Game</h1>
+        <form id="startMenuForm" autocomplete="off">
+            <div class="form-control">
+                <input type="text" name="playerName" required>
+                <label>Enter your name</label>
+            </div>
+
+            <div id="selectElement">
+                <label>Select Difficulty: </label>
+
+                <select name="difficulty" id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <div id="selectDeck">
+                <label>Select Deck: </label>
+
+                <select name="deck" id="deck">
+                    <option value="standard">Standard</option>
+                    <option value="dream-world">Dream World</option>
+                    <option value="official-artwork">Official Artwork</option>
+                </select>
+            </div>
+
+            <button class="btn" id="newGameButton">Start a New Game</button>
+        </form>
+    </div>
+
+    <div class="board hide">
+
+        <script src="api.js"></script>
+        <script src="pokemon.js"></script>
+
+</body>
+
+</html>
